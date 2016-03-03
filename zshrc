@@ -5,7 +5,6 @@
 #
 plugins=(rails git ruby common-aliases)
 # first include of the environment
-
 source $HOME/.config/zsh/environment.zsh
 
 typeset -ga sources
