@@ -4,6 +4,14 @@
 # alias definitions which can be edited/modified with 'aedit'
 #
 
+# You may uncomment the following lines if you want `ls' to be colorized:
+#eval "`dircolors`"
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -lh'
+alias l='ls $LS_OPTIONS -lhA'
+
+
+alias s='source ~/.zshrc'
 export EDITOR="vim"
 alias vi="vim"
 alias aedit=" $EDITOR $ZSH_CONFIG/aliases.zsh; source $ZSH_CONFIG/aliases.zsh"
@@ -29,7 +37,6 @@ alias v=" clear; ll -gh"    # standard directory view
 alias vs=" v **/*(.)"         # show all files in all subdirs plain in a list
 
 alias p=' ps aux | grep'
-alias g='git'
 alias b='brew'
 alias d=' dirs -v'
 alias ka="killall"
@@ -52,14 +59,13 @@ alias -g EO='>|/dev/null'
 
 # http://rayninfo.co.uk/tips/zshtips.html
 alias -g G='| grep -'
-alias -g P='2>&1 | $PAGER'
+#alias -g P='2>&1 | $PAGER'
 alias -g L='| less'
 alias -g LA='2>&1 | less'
-alias -g M='| most'
 alias -g C='| wc -l'
 
 # http://www.commandlinefu.com/commands/view/7284/zsh-suffix-to-inform-you-about-long-command-ending
-# zsh suffix to inform you about long command ending make, Just add "R" (without quotes) suffix to it and you can do other things: 
+# zsh suffix to inform you about long command ending make, Just add "R" (without quotes) suffix to it and you can do other things:
 # zsh will inform you when you can see the results.
 #alias -g R=' &; jobs | tail -1 | read A0 A1 A2 cmd; echo "running $cmd"; fg "$cmd"; zenity --info --text "$cmd done"; unset A0 A1 A2 cmd'
 
