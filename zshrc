@@ -14,9 +14,8 @@ sources+="$ZSH_CONFIG/options.zsh"
 sources+="$ZSH_CONFIG/aliases.zsh"
 sources+="$ZSH_CONFIG/config.zsh"
 sources+="$ZSH_CONFIG/git-aliases.zsh"
-#sources+="$ZSH_CONFIG/paths.zsh"
+sources+="$ZSH_CONFIG/paths.zsh"
 
-sources+="$ZSH_CONFIG/hayne-aliases.zsh"
 
 # highlights the live command line
 # Cloned From: git://github.com/nicoulaj/zsh-syntax-highlighting.git
@@ -41,7 +40,7 @@ sources+="$ZSH_CONFIG/fasd.zsh"
 
 # Private aliases and adoptions added at the very end (e.g. to start byuobu)
 #sources+="$ZSH_CONFIG/private.final.zsh"
-
+sources+="$ZSH_CONFIG/zshrc.zsh-template"
 
 # try to include all sources
 foreach file (`echo $sources`)
@@ -65,13 +64,12 @@ compinit
 autoload      edit-command-line
 zle -N        edit-command-line
 bindkey '\ee' edit-command-line
-VISUAL='usr/bin/vim'
-EDITOR='usr/bin/vim'
+VISUAL='/usr/bin/vim'
+EDITOR='/usr/bin/vim'
 
 
 alias -g ND='*(/om[1])' # newest directory
 alias -g NF='*(.om[1])' # newest file
 
-
-
-
+GIT_COMMITTER_NAME=zincxenon
+GIT_AUTHOR_NAME=zincxenon

@@ -10,11 +10,13 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export ZSH_CONFIG="$XDG_CONFIG_HOME/zsh"
 export ZSH_CACHE="$XDG_CACHE_HOME/zsh"
 mkdir -p $ZSH_CACHE
+export GRADLE_HOME=/Users/william/Work/gradle-2.11
 
 # executable search path
 export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/sbin:$PATH
+export PATH=$GRADLE_HOME/bin:$PATH
 
 # https://github.com/mxcl/homebrew/issues/11182
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH

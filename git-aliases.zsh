@@ -15,6 +15,8 @@ alias gcam='git commit -a -m'
 alias gs='git status -sb'
 alias gcb='git-copy-branch-name'
 alias gi='git init'
+alias gpu='git pull origin'
+alias gpua='git pull origin --all'
 
 # Git shortcuts
 alias gs='git status; git submodule status'
